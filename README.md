@@ -19,8 +19,7 @@ RUN apt update -y && apt-get install -y \
     build-essential \
     libpcre3 \
     libpcre3-dev && \
-    pip install pip --upgrade && \
-    pip install --no-cache-dir uwsgi -I
+    pip install pip --upgrade
 
 # create unprivileged user
 RUN adduser --disabled-password --gecos '' myuser  
@@ -40,7 +39,7 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 ENV DISPLAY=:99
 ```
 
-### How to step up
+### Step up docker
 
 1. **Install docker **
 
@@ -69,7 +68,7 @@ ENV DISPLAY=:99
 4. **Command to get inside docker**
 
    ```bash
-   $ docker exec -it <container_name> bash
+   $ docker exec -it python-selenium-docker_selenium_1 bash
    ```
 
 ### Python shell example inside container
@@ -85,8 +84,6 @@ ENV DISPLAY=:99
 >>> driver.get('http://www.google.com')
 >>> print(driver.page_source)
 ```
-
- 
 
 Thanks !!
 
