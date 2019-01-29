@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  # docker file
+  python-selenium:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    hostname: python-selenium
+    restart: always
+    ports:
+      - "5000:5000"
