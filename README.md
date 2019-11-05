@@ -60,8 +60,8 @@ ENV DISPLAY=:99
 3. **Clone repo and build and up container**
 
    ```bash
-   $ git clone https://github.com/upraisedco/python-docker-selenium.git
-   $ cd python-docker-selenium
+   $ git clone https://github.com/upraisedco/python-selenium-docker.git
+   $ cd python-selenium-docker
    $ docker-compose up --build -d
    ```
 
